@@ -628,6 +628,7 @@ class IntlTelInputApp extends Component {
   // find the first list item whose name starts with the query string
   searchForCountry(query) {
     for (let i = 0, max = this.countries.length; i < max; i++) {
+      console.log('country', this.countries[i]);
       if (utils.startsWith(this.countries[i].name, query)) {
         const listItem = this.flagDropDown.querySelector(
           `.country-list [data-country-code="${this.countries[i].iso2}"]:not(.preferred)`);
